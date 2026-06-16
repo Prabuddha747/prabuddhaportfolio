@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(cp \"/Users/prabuddhaverma/Downloads/profilepic.jpg\" \"/Users/prabuddhaverma/Visual Studio Code /portfolio/profile.jpg\")",
+      "Bash(sips -s format jpeg \"/Users/prabuddhaverma/Downloads/CertificateOfCompletion_AWS Certified Cloud Practitioner CLFC02 Cert Prep 3 Cloud Technology and Services \\(1\\).pdf\" --out \"/Users/prabuddhaverma/Visual Studio Code /portfolio/cert_aws.jpg\")",
+      "Bash(sips -s format jpeg \"/Users/prabuddhaverma/Downloads/Oracle Cloud Infrastructure 2025 Certified Generative AI Professional.pdf\" --out \"/Users/prabuddhaverma/Visual Studio Code /portfolio/cert_oracle.jpg\")"
+    ]
+  }
+}
