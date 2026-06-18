@@ -65,9 +65,12 @@
   .company { font-size: 12px; }
   .points li { font-size: 13px; }
 }
-@media (min-width: 769px) {
-  .works { padding: 80px 28px; }
-  .grid { gap: 16px; margin-top: 32px; }
+@media (min-width: 768px) {
+  .works { padding: 90px 48px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .card { padding: 26px; }
+  .role { font-size: 16px; }
+  .points li { font-size: 13px; }
 }
 @media (min-width: 1025px) {
   .works { padding: 100px 80px; }

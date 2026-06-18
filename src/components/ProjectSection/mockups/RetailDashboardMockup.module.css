@@ -86,7 +86,7 @@
   .tileDelta { font-size: 5px; }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .sidebar {
     display: flex;
     width: 30px;

@@ -67,7 +67,7 @@
   .lead { font-size: 14px; }
   .wrap { width: min(360px, 90vw); height: min(360px, 90vw); }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .globe { padding: 80px 28px; }
   .wrap { width: min(440px, 88vw); height: min(440px, 88vw); }
 }

@@ -64,7 +64,7 @@
   .row { grid-template-columns: 1fr 1fr; }
   .sub { font-size: 15px; }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .contact { padding: 80px 28px; }
   .grid { grid-template-columns: 1fr 1fr; gap: 44px; }
 }

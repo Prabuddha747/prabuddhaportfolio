@@ -3,8 +3,8 @@ export const projects = [
     id: 'project-1',
     num: '01',
     numLabel: '01 — Featured Project',
-    title: 'Retail Sales AI &<br>Invoice Extraction',
-    desc: 'End-to-end analytics platform with OCR invoice parsing, RAG-powered semantic insights via FAISS + Llama, and ML forecasting deployed across interactive dashboards.',
+    title: 'Revenue Intelligence &<br>Document Automation',
+    desc: 'An enterprise-grade analytics platform that transforms fragmented business data into actionable intelligence. Combining intelligent document understanding, semantic knowledge retrieval, and predictive modeling, the platform enables faster decision-making, operational efficiency, and scalable business visibility.',
     tags: ['Python', 'Llama LLM', 'FAISS RAG', 'Tesseract OCR', 'React.js'],
     accentTags: false,
     metrics: [
@@ -22,8 +22,8 @@ export const projects = [
     id: 'project-2',
     num: '02',
     numLabel: '02 — Patent Published · May 2026',
-    title: 'Indoor Plant<br>Growth Analysis',
-    desc: 'Flutter app with real-time ESP32 sensor integration across 7 sensors for precision farming. Firebase sync with anomaly alerts and automated feedback control loops.',
+    title: 'AgriPulse<br>Growth Analysis',
+    desc: 'A patented AgriTech innovation designed to create self-regulating growing environments through continuous environmental sensing and autonomous resource optimization. Built to bridge precision agriculture with intelligent automation for next-generation controlled cultivation.',
     tags: ['ESP32', 'Flutter', 'Firebase', 'IoT', '7 Sensors'],
     accentTags: false,
     metrics: [
@@ -40,8 +40,8 @@ export const projects = [
     id: 'project-3',
     num: '03',
     numLabel: '03 — Patent Published · Apr 2026',
-    title: 'Driver Health<br>Monitoring System',
-    desc: 'ESP32-based IoMT system for real-time predictive fatigue detection. React Native app with Firebase sync, GPS/GSM emergency alerts, and session-based multi-driver allocation.',
+    title: 'Project Sentinel<br>Driver Health Monitoring System',
+    desc: 'A patented real-time monitoring platform engineered to identify emerging risk patterns before critical events occur. By combining physiological signals, behavioral telemetry, and automated intervention workflows, Sentinel delivers a proactive approach to safety management.',
     tags: ['ESP32', 'React Native', 'Firebase', 'IoMT', 'GPS/GSM'],
     accentTags: false,
     metrics: [
@@ -59,8 +59,8 @@ export const projects = [
     num: '04',
     numLabel: '04 — AI Systems',
     accentNum: true,
-    title: 'Multimodal Live<br>Sentiment Analysis',
-    desc: 'Low-latency pipeline fusing Whisper for speech-to-text, DistilBERT for NLP emotion classification, and ViT for facial emotion recognition — unified into one real-time system.',
+    title: 'Project Percepta',
+    desc: 'low-latency perception pipeline that synthesizes voice, language, and visual signals into a unified behavioral intelligence layer. Designed for applications requiring deeper contextual awareness, adaptive interaction, and real-time sentiment interpretation.',
     tags: ['Whisper', 'DistilBERT', 'ViT', 'Transformers', 'Streamlit'],
     accentTags: true,
     metrics: [

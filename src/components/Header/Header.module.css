@@ -97,7 +97,7 @@
   .resumeBtn span { display: inline; }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header { padding: 0 48px; height: 68px; }
   .logo { font-size: 19px; }
   .logoBox { width: 33px; height: 33px; font-size: 15px; }

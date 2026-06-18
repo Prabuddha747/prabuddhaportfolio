@@ -38,8 +38,12 @@
 @media (min-width: 481px) {
   .p { font-size: 14px; }
 }
-@media (min-width: 769px) {
-  .about { padding: 80px 28px; gap: 44px; }
+@media (min-width: 768px) {
+  .about { grid-template-columns: 1fr 1fr; padding: 90px 48px; gap: 48px; }
+  .frame { width: 300px; }
+  .p { font-size: 14.5px; }
+  .skillRow { margin-bottom: 26px; }
+  .certRow { margin-bottom: 22px; }
 }
 @media (min-width: 1025px) {
   .about { grid-template-columns: 1fr 1fr; padding: 120px 80px; gap: 80px; min-height: 100vh; }

@@ -57,7 +57,7 @@
 }
 
 /* Full isometric 3D treatment once there's room to appreciate it without clipping */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .title { margin-bottom: 60px; }
   .grid { gap: 36px 44px; }
   .card {
