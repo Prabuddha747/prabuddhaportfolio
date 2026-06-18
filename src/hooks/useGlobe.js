@@ -58,6 +58,14 @@ export function useGlobe(canvasRef, labelsRef) {
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseup', onUp);
 
+    function touchX(e) { return (e.touches[0] || e.changedTouches[0]).clientX; }
+    function onTouchStart(e) { drag = true; lx = touchX(e); vel = 0; }
+    function onTouchMove(e) { if (!drag) return; e.preventDefault(); const x = touchX(e); vel = (x - lx) * 0.004; rot += vel; lx = x; }
+    function onTouchEnd() { drag = false; if (Math.abs(vel) < 0.001) vel = 0.004; }
+    canvas.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: false });
+    window.addEventListener('touchend', onTouchEnd);
+
     function proj(x, y, z, fov) { const f = fov / (fov + z); return [cx + x * f, cy - y * f]; }
 
     let gt = 0, hbt = 0, rafId;
@@ -133,6 +141,9 @@ export function useGlobe(canvasRef, labelsRef) {
       canvas.removeEventListener('mousedown', onDown);
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('mouseup', onUp);
+      canvas.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchend', onTouchEnd);
       if (ro) ro.disconnect();
       lels.forEach((el) => el.remove());
     };

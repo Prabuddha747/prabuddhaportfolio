@@ -49,7 +49,7 @@
 }
 :global(body.light) .wrap::before { background: radial-gradient(circle, rgba(255,155,50,.18) 0%, rgba(255,115,30,.1) 40%, transparent 70%); }
 
-.canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+.canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
 .canvas:active { cursor: grabbing; }
 .labels { position: absolute; inset: 0; pointer-events: none; }
 
