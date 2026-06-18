@@ -3,7 +3,7 @@
   top: 0; left: 0; right: 0;
   z-index: 100;
   height: 56px;
-  padding: 0 16px;
+  padding: 0 4%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,7 +89,7 @@
 .iconMoon { opacity: 0; transform: rotate(-45deg); }
 
 @media (min-width: 481px) {
-  .header { padding: 0 28px; height: 62px; }
+  .header { padding: 0 5%; height: 62px; }
   .logo { font-size: 17px; }
   .logoBox { width: 30px; height: 30px; font-size: 13px; }
   .actions { gap: 14px; }
@@ -98,7 +98,7 @@
 }
 
 @media (min-width: 768px) {
-  .header { padding: 0 48px; height: 68px; }
+  .header { padding: 0 6%; height: 68px; }
   .logo { font-size: 19px; }
   .logoBox { width: 33px; height: 33px; font-size: 15px; }
   .actions { gap: 18px; }

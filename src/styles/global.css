@@ -34,8 +34,12 @@ body.light ::-webkit-scrollbar-thumb { background: rgba(0, 147, 179, 0.3); }
   letter-spacing: -.03em; line-height: 1.1; color: var(--text); margin-bottom: 18px;
 }
 
-.divider { position: relative; z-index: 1; height: 1px; background: var(--border); margin: 0 80px; }
+.divider { position: relative; z-index: 1; height: 1px; background: var(--border); margin: 0 4%; }
 body.light .divider { border-color: var(--border); }
+
+@media (min-width: 481px) { .divider { margin: 0 5%; } }
+@media (min-width: 768px) { .divider { margin: 0 6%; } }
+@media (min-width: 1025px) { .divider { margin: 0 7%; } }
 
 /* BUTTONS */
 .btn {

@@ -1,7 +1,7 @@
 .works {
   position: relative;
   z-index: 1;
-  padding: 52px 16px;
+  padding: 52px 4%;
 }
 .works::before {
   content: '';
@@ -66,14 +66,14 @@
   .points li { font-size: 13px; }
 }
 @media (min-width: 768px) {
-  .works { padding: 90px 48px; }
+  .works { padding: 90px 6%; }
   .grid { grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
   .card { padding: 26px; }
   .role { font-size: 16px; }
   .points li { font-size: 13px; }
 }
 @media (min-width: 1025px) {
-  .works { padding: 100px 80px; }
+  .works { padding: 100px 7%; }
   .grid { grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px; }
   .card { padding: 32px; }
   .role { font-size: 17px; }

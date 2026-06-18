@@ -1,7 +1,7 @@
 .contact {
   position: relative;
   z-index: 1;
-  padding: 52px 16px;
+  padding: 52px 4%;
   overflow: hidden;
 }
 .contact::before {
@@ -65,11 +65,11 @@
   .sub { font-size: 15px; }
 }
 @media (min-width: 768px) {
-  .contact { padding: 80px 28px; }
+  .contact { padding: 80px 6%; }
   .grid { grid-template-columns: 1fr 1fr; gap: 44px; }
 }
 @media (min-width: 1025px) {
-  .contact { padding: 120px 80px; }
+  .contact { padding: 120px 7%; }
   .grid { gap: 80px; }
   .big { font-size: clamp(52px, 8vw, 108px); margin-bottom: 30px; }
   .sub { font-size: 17px; margin-bottom: 36px; }

@@ -1,7 +1,7 @@
 .testi {
   position: relative;
   z-index: 1;
-  padding: 52px 16px;
+  padding: 52px 4%;
 }
 .testi::before {
   content: '';
@@ -41,14 +41,14 @@
   .card { padding: 22px 20px; }
 }
 @media (min-width: 768px) {
-  .testi { padding: 90px 48px; }
+  .testi { padding: 90px 6%; }
   .title { margin-bottom: 48px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .card { padding: 24px 22px; }
   .text { font-size: 13.5px; }
 }
 @media (min-width: 1025px) {
-  .testi { padding: 120px 80px; }
+  .testi { padding: 120px 7%; }
   .title { margin-bottom: 60px; }
   .grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .card { padding: 28px 32px; }
