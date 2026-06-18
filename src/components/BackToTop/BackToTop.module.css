@@ -1,0 +1,27 @@
+.btt {
+  position: fixed;
+  bottom: 18px;
+  right: 14px;
+  width: 40px; height: 40px;
+  background: rgba(0, 229, 255, .09);
+  border: 1px solid rgba(0, 229, 255, .22);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, background .3s, transform .3s;
+  text-decoration: none;
+  cursor: none;
+}
+@media (pointer: coarse) { .btt { cursor: pointer; } }
+.btt.show { opacity: 1; pointer-events: auto; }
+.btt:hover { background: rgba(0, 229, 255, .18); transform: translateY(-3px); }
+.btt svg { width: 16px; height: 16px; stroke: var(--primary); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+:global(body.light) .btt { background: rgba(0, 147, 179, .09); border-color: rgba(0, 147, 179, .22); }
+:global(body.light) .btt:hover { background: rgba(0, 147, 179, .17); }
+
+@media (min-width: 481px) {
+  .btt { bottom: 30px; right: 30px; width: 44px; height: 44px; }
+  .btt svg { width: 16px; height: 16px; }
+}

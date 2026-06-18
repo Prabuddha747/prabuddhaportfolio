@@ -1,0 +1,54 @@
+.testi {
+  position: relative;
+  z-index: 1;
+  padding: 52px 16px;
+}
+.testi::before {
+  content: '';
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(0,229,255,.03), transparent 70%);
+}
+.title { text-align: center; margin-bottom: 32px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 1100px; margin: 0 auto; }
+
+.card {
+  padding: 18px 16px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .3s, transform .3s var(--ease);
+}
+:global(body.light) .card { background: rgba(0,0,0,.025); }
+.card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 0% 0%, rgba(0,229,255,.04), transparent 60%);
+  pointer-events: none;
+}
+.card:hover { border-color: rgba(0,229,255,.18); transform: translateY(-5px); }
+:global(body.light) .card:hover { border-color: rgba(0,147,179,.18); }
+
+.quote { font-family: 'Space Grotesk', sans-serif; font-size: 32px; line-height: 1; color: var(--primary); opacity: .35; margin-bottom: 10px; display: block; }
+.text { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--text-b); margin-bottom: 18px; font-style: italic; }
+.sep { width: 28px; height: 1.5px; background: var(--primary); margin-bottom: 14px; opacity: .45; }
+.name { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.role { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--text-l); }
+
+@media (min-width: 481px) {
+  .card { padding: 22px 20px; }
+}
+@media (min-width: 769px) {
+  .testi { padding: 80px 28px; }
+  .grid { gap: 16px; }
+}
+@media (min-width: 1025px) {
+  .testi { padding: 120px 80px; }
+  .title { margin-bottom: 60px; }
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .card { padding: 28px 32px; }
+  .quote { font-size: 40px; margin-bottom: 12px; }
+  .text { font-size: 14px; margin-bottom: 20px; }
+}

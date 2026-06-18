@@ -1,0 +1,78 @@
+.works {
+  position: relative;
+  z-index: 1;
+  padding: 52px 16px;
+}
+.works::before {
+  content: '';
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 50% at 50% 45%, rgba(0,229,255,.03), transparent 70%);
+}
+
+.grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
+
+.card {
+  padding: 18px 16px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .3s, transform .3s var(--ease);
+}
+:global(body.light) .card { background: rgba(0,0,0,.025); }
+.card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--primary);
+  transform: scaleY(0);
+  transition: transform .4s var(--ease);
+  transform-origin: bottom;
+}
+.card.accent::before { background: var(--accent); }
+.card:hover { transform: translateY(-3px); }
+.card:hover::before { transform: scaleY(1); }
+.card:hover:not(.accent) { border-color: rgba(0,229,255,.14); }
+:global(body.light) .card:hover:not(.accent) { border-color: rgba(0,147,179,.14); }
+.card.accent:hover { border-color: rgba(166,108,255,.14); }
+
+.head2 { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; flex-wrap: wrap; gap: 8px; }
+.role { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.company { font-size: 11px; color: var(--primary); font-weight: 700; letter-spacing: .05em; }
+.card.accent .company { color: var(--accent); }
+.period {
+  font-size: 9px; font-weight: 600; letter-spacing: .06em; color: var(--text-l);
+  padding: 2px 9px; background: rgba(255,255,255,.04); border-radius: 100px; white-space: nowrap;
+}
+.period.live { color: var(--primary); background: rgba(0,229,255,.07); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
+.tag {
+  font-size: 9px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--primary); padding: 3px 9px; border: 1px solid rgba(0,229,255,.2); border-radius: 2px;
+}
+.tagAccent { color: var(--accent); border-color: rgba(166,108,255,.22); }
+
+.points { padding-left: 14px; display: flex; flex-direction: column; gap: 6px; margin: 0; }
+.points li { font-size: 12px; font-weight: 300; color: var(--text-b); line-height: 1.7; }
+.points li::marker { color: var(--primary); }
+.card.accent .points li::marker { color: var(--accent); }
+
+@media (min-width: 481px) {
+  .card { padding: 22px 20px; }
+  .role { font-size: 15px; }
+  .company { font-size: 12px; }
+  .points li { font-size: 13px; }
+}
+@media (min-width: 769px) {
+  .works { padding: 80px 28px; }
+  .grid { gap: 16px; margin-top: 32px; }
+}
+@media (min-width: 1025px) {
+  .works { padding: 100px 80px; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 52px; }
+  .card { padding: 32px; }
+  .role { font-size: 17px; }
+  .period { padding: 2px 9px; }
+}

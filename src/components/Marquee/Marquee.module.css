@@ -1,0 +1,21 @@
+.wrap {
+  position: relative;
+  z-index: 50;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 14px 0;
+}
+:global(body.light) .wrap { border-color: var(--border); }
+.track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.item {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text-l);
+  padding: 0 26px;
+  white-space: nowrap;
+}
+.item::after { content: ' \00b7'; color: var(--primary); margin-left: 26px; }
+:global(body.light) .item { color: rgba(10,10,22,.28); }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }

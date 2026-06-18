@@ -1,0 +1,25 @@
+.cur, .curRing {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cur {
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  transition: width .2s, height .2s;
+}
+.curRing {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(0, 229, 255, 0.45);
+  transition: width .18s, height .18s, border-color .3s;
+}
+:global(body.light) .cur { background: var(--primary); }
+:global(body.light) .curRing { border-color: rgba(0, 147, 179, 0.45); }
+
+@media (pointer: coarse) {
+  .cur, .curRing { display: none; }
+}

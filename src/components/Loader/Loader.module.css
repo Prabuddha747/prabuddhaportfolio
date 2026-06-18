@@ -1,0 +1,124 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: #060608;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .9s cubic-bezier(0.4, 0, 0.2, 1), visibility .9s;
+}
+.loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, .025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 88px;
+  font-weight: 800;
+  color: #00e5ff;
+  letter-spacing: -.04em;
+  line-height: 1;
+  position: relative;
+  animation: ldLogoPulse 1.8s ease-in-out infinite;
+}
+.logo::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 255, .18) 0%, transparent 70%);
+  animation: ldRing 1.8s ease-in-out infinite;
+}
+
+.name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .38em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .55);
+  margin-top: 20px;
+  overflow: hidden;
+}
+.name span {
+  display: inline-block;
+  animation: ldCharIn .05s ease forwards;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.sub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: rgba(0, 229, 255, .45);
+  margin-top: 8px;
+}
+
+.barWrap {
+  width: 220px;
+  height: 1px;
+  background: rgba(255, 255, 255, .08);
+  margin-top: 32px;
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+.bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, rgba(0, 229, 255, .5), #00e5ff);
+  border-radius: 1px;
+  animation: ldFill 2.2s cubic-bezier(0.4, 0, 0.6, 1) forwards .3s;
+}
+.bar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 6px;
+  height: 7px;
+  background: #00e5ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00e5ff, 0 0 20px rgba(0, 229, 255, .4);
+}
+
+.pct {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: rgba(0, 229, 255, .4);
+  margin-top: 10px;
+}
+
+@keyframes ldLogoPulse {
+  0%, 100% { text-shadow: 0 0 30px rgba(0, 229, 255, .4), 0 0 60px rgba(0, 229, 255, .15); }
+  50% { text-shadow: 0 0 50px rgba(0, 229, 255, .7), 0 0 100px rgba(0, 229, 255, .3), 0 0 140px rgba(0, 229, 255, .1); }
+}
+@keyframes ldRing {
+  0%, 100% { opacity: .5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+@keyframes ldFill {
+  0% { width: 0; }
+  60% { width: 80%; }
+  85% { width: 93%; }
+  100% { width: 100%; }
+}
+@keyframes ldCharIn { to { opacity: 1; transform: none; } }
+
+@media (max-width: 480px) {
+  .logo { font-size: 68px; }
+  .name { font-size: 13px; }
+}

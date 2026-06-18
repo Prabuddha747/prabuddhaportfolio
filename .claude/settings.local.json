@@ -4,7 +4,23 @@
       "Bash(python3 -c ' *)",
       "Bash(cp \"/Users/prabuddhaverma/Downloads/profilepic.jpg\" \"/Users/prabuddhaverma/Visual Studio Code /portfolio/profile.jpg\")",
       "Bash(sips -s format jpeg \"/Users/prabuddhaverma/Downloads/CertificateOfCompletion_AWS Certified Cloud Practitioner CLFC02 Cert Prep 3 Cloud Technology and Services \\(1\\).pdf\" --out \"/Users/prabuddhaverma/Visual Studio Code /portfolio/cert_aws.jpg\")",
-      "Bash(sips -s format jpeg \"/Users/prabuddhaverma/Downloads/Oracle Cloud Infrastructure 2025 Certified Generative AI Professional.pdf\" --out \"/Users/prabuddhaverma/Visual Studio Code /portfolio/cert_oracle.jpg\")"
+      "Bash(sips -s format jpeg \"/Users/prabuddhaverma/Downloads/Oracle Cloud Infrastructure 2025 Certified Generative AI Professional.pdf\" --out \"/Users/prabuddhaverma/Visual Studio Code /portfolio/cert_oracle.jpg\")",
+      "Bash(mkdir -p public src)",
+      "Bash(mv index.html legacy-static-site.html.bak)",
+      "Bash(mv profile.jpg cert_aws.jpg cert_oracle.jpg public/)",
+      "Bash(npm run *)",
+      "Bash(tee /tmp/vite-dev.log)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:5173/prabuddhaportfolio/)",
+      "Read(//Applications/**)",
+      "Bash(npx --yes playwright --version)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --disable-gpu --no-sandbox --virtual-time-budget=4000 --enable-logging=stderr --v=1 http://localhost:5173/prabuddhaportfolio/ --dump-dom)",
+      "Bash(CHROME=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" *)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --no-sandbox --virtual-time-budget=8000 --dump-dom http://localhost:5173/prabuddhaportfolio/)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
     ]
   }
 }

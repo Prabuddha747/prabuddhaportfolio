@@ -1,0 +1,110 @@
+.social {
+  position: relative;
+  z-index: 1;
+  padding: 52px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social::before {
+  content: '';
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 65% 50% at 50% 50%, rgba(166,108,255,.04), transparent 70%);
+}
+
+.title { text-align: center; margin-bottom: 32px; position: relative; z-index: 1; }
+.grid {
+  display: flex; flex-direction: column; flex-wrap: wrap;
+  justify-content: center; align-items: center;
+  gap: 22px;
+  position: relative; z-index: 1;
+}
+
+/* ISO CARD — flat (no 3D tilt) on small screens to avoid clipped faces in a narrow viewport */
+.scene { perspective: 1100px; text-decoration: none; display: block; }
+.card {
+  width: 240px; height: 64px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.face { position: absolute; }
+.front {
+  width: 240px; height: 64px; left: 0; top: 0;
+  background: rgba(9,9,14,.96);
+  border: 1px solid rgba(255,255,255,.12);
+  display: flex; align-items: center; gap: 14px; padding: 0 18px;
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+}
+.front::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 8px;
+  background: radial-gradient(ellipse at 25% 50%, var(--sc, rgba(0,229,255,.05)), transparent 65%);
+  pointer-events: none;
+}
+.top, .right, .bottom { display: none; }
+
+.icon { width: 30px; height: 30px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 7px; background: rgba(255,255,255,.05); }
+.icon svg { width: 17px; height: 17px; }
+.name { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: -.01em; color: rgba(255,255,255,.9); }
+.handle { font-size: 9px; color: rgba(255,255,255,.38); margin-top: 1px; }
+
+@media (min-width: 481px) {
+  .title { margin-bottom: 44px; }
+  .grid { flex-direction: row; gap: 28px 36px; }
+}
+
+/* Full isometric 3D treatment once there's room to appreciate it without clipping */
+@media (min-width: 769px) {
+  .title { margin-bottom: 60px; }
+  .grid { gap: 36px 44px; }
+  .card {
+    width: 240px; height: 72px;
+    transform: rotateX(22deg) rotateY(-32deg);
+    animation: isoFloat 4s ease-in-out infinite;
+    animation-delay: var(--d, 0s);
+    transition: filter .3s;
+  }
+  .card:hover { filter: brightness(1.18); }
+  .scene:hover .card { animation-play-state: paused; }
+  .front { width: 240px; height: 72px; border-radius: 0; }
+  .front::before { border-radius: 0; }
+  .top {
+    display: flex;
+    width: 240px; height: 72px; left: 0; top: -72px;
+    background: rgba(13,13,20,.72);
+    border: 1px solid rgba(255,255,255,.08);
+    transform-origin: 50% 100%;
+    transform: rotateX(-90deg);
+    align-items: center; padding: 0 22px;
+    font-family: 'Space Grotesk', sans-serif; font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+    color: rgba(255,255,255,.32);
+  }
+  .right {
+    display: block;
+    width: 72px; height: 72px; left: 240px; top: 0;
+    background: rgba(5,5,8,.96);
+    border: 1px solid rgba(255,255,255,.07);
+    transform-origin: 0% 50%;
+    transform: rotateY(90deg);
+  }
+  .bottom {
+    display: block;
+    width: 240px; height: 72px; left: 0; top: 72px;
+    background: rgba(3,3,5,.9);
+    border: 1px solid rgba(255,255,255,.05);
+    transform-origin: 50% 0%;
+    transform: rotateX(90deg);
+  }
+  .icon { width: 34px; height: 34px; border-radius: 7px; }
+  .icon svg { width: 19px; height: 19px; }
+  .name { font-size: 14px; }
+  .handle { font-size: 10px; }
+}
+
+@keyframes isoFloat {
+  0%, 100% { transform: rotateX(22deg) rotateY(-32deg) translateY(0); }
+  50% { transform: rotateX(22deg) rotateY(-32deg) translateY(-14px); }
+}

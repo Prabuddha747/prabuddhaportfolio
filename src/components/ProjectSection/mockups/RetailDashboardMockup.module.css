@@ -1,0 +1,122 @@
+.mdb {
+  width: 100%; height: 100%;
+  background: linear-gradient(160deg, #0a0a16, #091220);
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar { display: none; }
+
+.main {
+  flex: 1;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.tabbar {
+  height: 16px;
+  background: rgba(255,255,255,.04);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.dot { width: 5px; height: 5px; border-radius: 50%; }
+.dotR { background: #ff5f57; }
+.dotY { background: #febc2e; }
+.dotG { background: #28c840; }
+.url { font-size: 5px; color: rgba(255,255,255,.22); margin-left: 4px; white-space: nowrap; overflow: hidden; }
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.tile {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 5px;
+  padding: 5px;
+}
+.tileLabel { font-size: 5.5px; color: rgba(255,255,255,.32); letter-spacing: .08em; text-transform: uppercase; }
+.tileValue { font-size: 8px; font-weight: 700; color: rgba(0,229,255,.9); margin-top: 1px; }
+.tileValue.up { color: rgba(74,222,128,.92); }
+.tileValue.down { color: rgba(255,100,100,.9); }
+.tileDelta { font-size: 4.5px; margin-top: 1px; }
+.tileDelta.up { color: rgba(74,222,128,.6); }
+.tileDelta.down { color: rgba(255,100,100,.6); }
+
+.bottomRow { flex: 1; display: flex; flex-direction: column; gap: 4px; min-height: 0; overflow: hidden; }
+
+.chartCard {
+  flex: 1;
+  background: rgba(0,229,255,.02);
+  border: 1px solid rgba(0,229,255,.07);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-height: 0;
+}
+.chartHead { display: flex; justify-content: space-between; align-items: center; font-size: 5.5px; color: rgba(255,255,255,.5); font-weight: 600; }
+.chartRange { font-size: 4.5px; color: rgba(255,255,255,.2); background: rgba(255,255,255,.04); padding: 1px 4px; border-radius: 2px; }
+.chartSvg { flex: 1; width: 100%; min-height: 0; }
+.legend { display: flex; gap: 8px; font-size: 4.5px; }
+.legendRevenue { color: rgba(0,229,255,.6); }
+.legendTarget { color: rgba(166,108,255,.45); }
+
+.aiPanels { display: none; }
+
+@keyframes mEkgDash { from { stroke-dashoffset: 250; } to { stroke-dashoffset: 0; } }
+.mekg { stroke-dasharray: 250; animation: mEkgDash 3.5s linear infinite; }
+
+@media (min-width: 481px) {
+  .main { padding: 7px; gap: 5px; }
+  .tabbar { height: 18px; }
+  .url { font-size: 5.5px; }
+  .tileLabel { font-size: 6px; }
+  .tileValue { font-size: 9px; }
+  .tileDelta { font-size: 5px; }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+    width: 30px;
+    background: rgba(255,255,255,.025);
+    border-right: 1px solid rgba(255,255,255,.04);
+    padding: 7px 4px;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .sidebarLogo {
+    width: 16px; height: 16px; border-radius: 3px;
+    background: rgba(0,229,255,.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 7px; font-weight: 700; color: rgba(0,229,255,.92);
+  }
+  .sidebarDivider { width: 16px; height: 1px; background: rgba(0,229,255,.2); }
+  .sidebarItem { font-size: 4px; color: rgba(255,255,255,.22); text-transform: uppercase; letter-spacing: .04em; text-align: center; line-height: 1.5; }
+  .sidebarActive { color: rgba(0,229,255,.7); background: rgba(0,229,255,.08); padding: 2px 0; border-radius: 2px; width: 100%; }
+
+  .bottomRow { flex-direction: row; }
+  .aiPanels { display: flex; flex-direction: column; gap: 3px; width: 64px; flex-shrink: 0; }
+  .aiPanel { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 5px; padding: 5px; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .barTrack { height: 3px; background: rgba(255,255,255,.05); border-radius: 1px; overflow: hidden; }
+  .barFill { height: 100%; border-radius: 1px; }
+}
+
+@media (min-width: 1025px) {
+  .main { padding: 8px; }
+  .tileValue { font-size: 9px; }
+  .aiPanels { width: 62px; }
+}
