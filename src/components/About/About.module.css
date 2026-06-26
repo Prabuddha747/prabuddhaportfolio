@@ -6,6 +6,7 @@
   align-items: center;
   padding: 52px 4%;
   gap: 28px;
+  overflow: hidden;
 }
 
 .avis { display: flex; align-items: center; justify-content: center; }

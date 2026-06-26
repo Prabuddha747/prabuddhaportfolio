@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1;
   padding: 52px 4%;
+  overflow: hidden;
 }
 .works::before {
   content: '';
