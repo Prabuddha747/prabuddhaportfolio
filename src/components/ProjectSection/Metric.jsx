@@ -11,6 +11,7 @@ export default function Metric({ metric }) {
         ) : (
           metric.display
         )}
+        {metric.decimal && <span>{metric.decimal}</span>}
         <span>{metric.suffix || metric.mark}</span>
       </div>
       <div className={styles.metricLabel}>{metric.label}</div>

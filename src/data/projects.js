@@ -9,7 +9,7 @@ export const projects = [
     accentTags: false,
     metrics: [
       { value: 95, suffix: '%', label: 'OCR Accuracy' },
-      { value: 81, suffix: '.7%', label: 'Forecast Acc.' },
+      { value: 81, decimal: '.7', suffix: '%', label: 'Forecast Acc.' },
       { value: 70, suffix: '%', label: 'Less Manual Work' },
     ],
     nextHref: '#project-2',

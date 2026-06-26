@@ -924,7 +924,7 @@ body.light .wcard:hover:not(.pu){border-color:rgba(0,147,179,.14);}
             <!-- AI metric panels -->
             <div style="width:62px;display:flex;flex-direction:column;gap:3px;flex-shrink:0;">
               <div class="mcard" style="padding:5px;flex:1;display:flex;flex-direction:column;gap:2px;">
-                <div class="mcl">Forecast</div><div class="mcv" style="font-size:10px;">81.7%</div>
+                <div class="mcl">Forecast</div><div class="mcv" style="font-size:10px;">81%</div>
                 <div style="height:3px;background:rgba(255,255,255,.05);border-radius:1px;overflow:hidden;"><div style="height:100%;width:82%;background:linear-gradient(90deg,rgba(0,229,255,.7),rgba(0,229,255,.3));border-radius:1px;"></div></div>
               </div>
               <div class="mcard" style="padding:5px;flex:1;display:flex;flex-direction:column;gap:2px;">

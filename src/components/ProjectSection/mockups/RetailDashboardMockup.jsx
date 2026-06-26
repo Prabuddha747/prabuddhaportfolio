@@ -58,7 +58,7 @@ export default function RetailDashboardMockup() {
           <div className={styles.aiPanels}>
             <div className={styles.aiPanel}>
               <div className={styles.tileLabel}>Forecast</div>
-              <div className={styles.tileValue}>81.7%</div>
+              <div className={styles.tileValue}>81%</div>
               <div className={styles.barTrack}><div className={styles.barFill} style={{ width: '82%', background: 'linear-gradient(90deg,rgba(0,229,255,.7),rgba(0,229,255,.3))' }} /></div>
             </div>
             <div className={styles.aiPanel}>

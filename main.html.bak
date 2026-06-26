@@ -697,7 +697,7 @@ header {
                 <div class="mock-dot g"></div>
               </div>
               <div class="mock-grid">
-                <div class="mock-card"><div class="mock-card-label">Forecast</div><div class="mock-card-val">81.7%</div></div>
+                <div class="mock-card"><div class="mock-card-label">Forecast</div><div class="mock-card-val">81%</div></div>
                 <div class="mock-card"><div class="mock-card-label">OCR Acc.</div><div class="mock-card-val">95%</div></div>
                 <div class="mock-card"><div class="mock-card-label">Churn</div><div class="mock-card-val">90%</div></div>
                 <div class="mock-card"><div class="mock-card-label">Efficiency</div><div class="mock-card-val">+70%</div></div>
