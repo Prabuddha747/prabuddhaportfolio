@@ -4,8 +4,8 @@ import { experience } from '../../data/experience';
 import styles from './WorkExperience.module.css';
 
 const JELLY = [
-  { x: '78%', y: '8%', w: '420px', c1: 'rgba(0,229,255,.055)', c2: 'rgba(0,200,230,.02)', dur: '16s', del: '-3s' },
-  { x: '5%', y: '55%', w: '320px', c1: 'rgba(166,108,255,.05)', c2: 'rgba(140,80,240,.015)', dur: '13s', del: '-9s' },
+  { x: '78%', y: '8%', w: 'min(420px, 52vw)', c1: 'rgba(0,229,255,.055)', c2: 'rgba(0,200,230,.02)', dur: '16s', del: '-3s' },
+  { x: '5%', y: '55%', w: 'min(320px, 40vw)', c1: 'rgba(166,108,255,.05)', c2: 'rgba(140,80,240,.015)', dur: '13s', del: '-9s' },
 ];
 
 export default function WorkExperience() {

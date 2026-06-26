@@ -4,7 +4,7 @@ import { skillPills } from '../../data/techStack';
 import styles from './About.module.css';
 
 const JELLY = [
-  { x: '72%', y: '20%', w: '360px', c1: 'rgba(166,108,255,.06)', c2: 'rgba(120,60,220,.02)', dur: '19s', del: '-6s' },
+  { x: '72%', y: '20%', w: 'min(360px, 45vw)', c1: 'rgba(166,108,255,.06)', c2: 'rgba(120,60,220,.02)', dur: '19s', del: '-6s' },
 ];
 
 export default function About() {

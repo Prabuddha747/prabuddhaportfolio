@@ -5,8 +5,8 @@ import { socialLinks } from '../../data/socialLinks';
 import styles from './Contact.module.css';
 
 const JELLY = [
-  { x: '75%', y: '55%', w: '380px', c1: 'rgba(0,229,255,.055)', c2: 'rgba(0,200,230,.02)', dur: '16s', del: '-4s' },
-  { x: '2%', y: '15%', w: '300px', c1: 'rgba(166,108,255,.05)', c2: 'transparent', dur: '13s', del: '-10s' },
+  { x: '75%', y: '55%', w: 'min(380px, 47vw)', c1: 'rgba(0,229,255,.055)', c2: 'rgba(0,200,230,.02)', dur: '16s', del: '-4s' },
+  { x: '2%', y: '15%', w: 'min(300px, 38vw)', c1: 'rgba(166,108,255,.05)', c2: 'transparent', dur: '13s', del: '-10s' },
 ];
 
 export default function Contact() {

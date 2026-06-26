@@ -5,8 +5,8 @@ import { socialLinks } from '../../data/socialLinks';
 import styles from './Social.module.css';
 
 const JELLY = [
-  { x: '8%', y: '10%', w: '380px', c1: 'rgba(166,108,255,.06)', c2: 'rgba(120,60,220,.02)', dur: '18s', del: '-5s' },
-  { x: '70%', y: '55%', w: '350px', c1: 'rgba(0,229,255,.05)', c2: 'rgba(0,180,220,.015)', dur: '14s', del: '-11s' },
+  { x: '8%', y: '10%', w: 'min(380px, 47vw)', c1: 'rgba(166,108,255,.06)', c2: 'rgba(120,60,220,.02)', dur: '18s', del: '-5s' },
+  { x: '70%', y: '55%', w: 'min(350px, 44vw)', c1: 'rgba(0,229,255,.05)', c2: 'rgba(0,180,220,.015)', dur: '14s', del: '-11s' },
 ];
 
 const GITHUB_SVG = (

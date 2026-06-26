@@ -4,8 +4,8 @@ import { testimonials } from '../../data/testimonials';
 import styles from './Testimonials.module.css';
 
 const JELLY = [
-  { x: '60%', y: '5%', w: '400px', c1: 'rgba(0,229,255,.05)', c2: 'rgba(0,200,240,.015)', dur: '15s', del: '-7s' },
-  { x: '-5%', y: '50%', w: '340px', c1: 'rgba(166,108,255,.055)', c2: 'transparent', dur: '17s', del: '-2s' },
+  { x: '60%', y: '5%', w: 'min(400px, 50vw)', c1: 'rgba(0,229,255,.05)', c2: 'rgba(0,200,240,.015)', dur: '15s', del: '-7s' },
+  { x: '-5%', y: '50%', w: 'min(340px, 42vw)', c1: 'rgba(166,108,255,.055)', c2: 'transparent', dur: '17s', del: '-2s' },
 ];
 
 export default function Testimonials() {
