@@ -13,7 +13,7 @@
 .blob {
   position: absolute;
   top: 6%;
-  right: -36px;
+  right: -6%;
   width: min(200px, 68vw);
   height: min(200px, 68vw);
   border-radius: 50%;
@@ -86,7 +86,7 @@
 :global(body.light) .bfaceSmile path { stroke: rgba(0,100,160,.55); }
 
 @media (min-width: 481px) {
-  .blob { right: -50px; width: min(240px, 70vw); height: min(240px, 70vw); }
+  .blob { right: -7%; width: min(240px, 70vw); height: min(240px, 70vw); }
   .bface { gap: 14px; }
   .bfaceEyes { gap: 28px; }
   .bfaceEye { width: 19px; height: 19px; }
@@ -94,10 +94,10 @@
   .bfaceSmile { width: 48px; height: 20px; }
 }
 @media (min-width: 768px) {
-  .blob { top: 8%; right: -60px; width: min(300px, 72vw); height: min(300px, 72vw); }
+  .blob { top: 8%; right: -8%; width: min(300px, 72vw); height: min(300px, 72vw); }
 }
 @media (min-width: 1025px) {
-  .blob { right: -110px; width: min(580px, 66vw); height: min(580px, 66vw); }
+  .blob { right: -10%; width: min(580px, 66vw); height: min(580px, 66vw); }
   .bface { gap: 18px; }
   .bfaceEyes { gap: 38px; }
   .bfaceEye { width: 22px; height: 22px; }
