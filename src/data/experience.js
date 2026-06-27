@@ -13,7 +13,7 @@ export const experience = [
     ],
   },
   {
-    role: 'Backend Dev Intern',
+    role: 'Backend Developer Intern',
     company: 'Predictive Data Science',
     period: "May'25 — Jul'25",
     live: false,
