@@ -6,6 +6,6 @@ export const socialLinks = {
 };
 
 export const resumeLinks = {
-  preview: 'https://drive.google.com/file/d/1RRvnps-w5-Cs7cgJ6mJjw8WeCFkOQHHl/preview',
-  download: 'https://drive.google.com/uc?export=download&id=1RRvnps-w5-Cs7cgJ6mJjw8WeCFkOQHHl',
+  preview: 'https://drive.google.com/file/d/1WGOigjz9X4rjM5aIaYoM1S2D3400zO8p/preview',
+  download: 'https://drive.google.com/uc?export=download&id=1WGOigjz9X4rjM5aIaYoM1S2D3400zO8p',
 };
